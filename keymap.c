@@ -296,7 +296,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //---------------------------------------------------------------------------
   [L_VIOL] = MY_layout(
     // LEFT HALF
-    TG_VIOL, WN_4,    KC_F10,  KC_F11,  KC_F12,  _______, _______,
+    TG_VIOL, WN_4,    KC_F10,  KC_F11,  KC_F12,  KC_F13, _______,
     WN_1,    WN_5,    KC_F7,   KC_F8,   KC_F9,   _______, _______,
     WN_2,    WN_6,    KC_F4,   KC_F5,   KC_F6,   _______, _______,
     WN_3,    WN_7,    KC_F1,   KC_F2,   KC_F3,   _______,
