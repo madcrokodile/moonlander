@@ -17,6 +17,15 @@ enum custom_hotkeys_keycodes {
   CT_ENT,
   MY_ALT,
   MY_CTRL,
+  MY_APP1,
+  MY_APP2,
+  MY_APP3,
+  MY_APP4,
+  MY_APP5,
+  MY_APP6,
+  MY_APP7,
+  MY_APP8,
+  MY_APP9,
 
   CUSTOM_HOTKEYS_NEW_SAFE_RANGE,
   #undef CUSTOM_SAFE_RANGE
@@ -53,6 +62,30 @@ bool process_my_hotkeys(uint16_t keycode, keyrecord_t *record) {
           }
           case SYSTEM_MACOS: {
             WITH(SHIFT, { WITH(COMMAND, { PRESS(KC_2); }); });
+            break;
+          }
+        }
+      }
+      return false;
+      break;
+    case MY_APP1:
+    case MY_APP2:
+    case MY_APP3:
+    case MY_APP4:
+    case MY_APP5:
+    case MY_APP6:
+    case MY_APP7:
+    case MY_APP8:
+    case MY_APP9:
+      int delta = keycode - MY_APP1;
+      if (record->event.pressed) {
+        switch (system_current) {
+          case SYSTEM_WINDOWS: {
+            WITH(WIN, { PRESS(KC_1 + delta); });
+            break;
+          }
+          case SYSTEM_MACOS: {
+            WITH(CTRL, { WITH(COMMAND, { PRESS(KC_1 + delta); }); });
             break;
           }
         }

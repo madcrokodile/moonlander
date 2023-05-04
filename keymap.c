@@ -48,17 +48,6 @@ LAYOUT_moonlander( \
                         k50, k51, k52,   kb4, kb5, kb6 \
 )
 
-// Gui keys
-#define WN_1 LGUI(KC_1)
-#define WN_2 LGUI(KC_2)
-#define WN_3 LGUI(KC_3)
-#define WN_4 LGUI(KC_4)
-#define WN_5 LGUI(KC_5)
-#define WN_6 LGUI(KC_6)
-#define WN_7 LGUI(KC_7)
-#define WN_8 LGUI(KC_8)
-#define WN_9 LGUI(KC_9)
-
 // Ctrl keys
 #define CT_UP LCTL(KC_UP)
 #define CT_DOWN LCTL(KC_DOWN)
@@ -296,10 +285,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //---------------------------------------------------------------------------
   [L_VIOL] = MY_layout(
     // LEFT HALF
-    TG_VIOL, WN_4,    KC_F10,  KC_F11,  KC_F12,  KC_F13, _______,
-    WN_1,    WN_5,    KC_F7,   KC_F8,   KC_F9,   _______, _______,
-    WN_2,    WN_6,    KC_F4,   KC_F5,   KC_F6,   _______, _______,
-    WN_3,    WN_7,    KC_F1,   KC_F2,   KC_F3,   _______,
+    TG_VIOL, MY_APP4, KC_F10,  KC_F11,  KC_F12,  KC_F13,  _______,
+    MY_APP1, MY_APP5, KC_F7,   KC_F8,   KC_F9,   _______, _______,
+    MY_APP2, MY_APP6, KC_F4,   KC_F5,   KC_F6,   _______, _______,
+    MY_APP3, MY_APP7, KC_F1,   KC_F2,   KC_F3,   _______,
     _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
