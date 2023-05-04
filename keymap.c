@@ -529,6 +529,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if (!initted_for_layer_state) {
+      uprintf("KEYCODES: custom_start: %d, custom: %d, custom_lang: %d, combo: %d, lang_shift: %d\n", KEYCODES_START, MY_HOME, EN_LTEQ, COMBO_START, LANG_SHIFT_START);
+  }
   initted_for_layer_state = true;
 
   if (!process_my_music_keys(keycode, record)) {
@@ -616,5 +619,4 @@ void rgb_matrix_indicators_user(void) {
 
 void keyboard_post_init_user(void) {
   rgb_matrix_enable();
-  uprintf("KEYCODES: custom_start: %d, custom: %d, custom_lang: %d, combo: %d, lang_shift: %d\n", KEYCODES_START, MY_HOME, EN_LTEQ, COMBO_START, LANG_SHIFT_START);
 }
