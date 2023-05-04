@@ -5,11 +5,11 @@ typedef struct {
     char* name;
 } keyname;
 
-keyname names[400];
+keyname names[500];
 int names_first_unused = 0;
 
 void add_key_name(uint16_t keycode, char* name) {
-    if (names_first_unused == 400) {
+    if (names_first_unused == 500) {
         uprintf("MAX keycode names used\n");
         return;
     }
