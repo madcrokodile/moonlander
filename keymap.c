@@ -616,4 +616,5 @@ void rgb_matrix_indicators_user(void) {
 
 void keyboard_post_init_user(void) {
   rgb_matrix_enable();
+  uprintf("KEYCODES: custom_start: %d, custom: %d, custom_lang: %d, combo: %d, lang_shift: %d\n", KEYCODES_START, MY_HOME, EN_LTEQ, COMBO_START, LANG_SHIFT_START);
 }
