@@ -77,15 +77,18 @@ bool process_my_hotkeys(uint16_t keycode, keyrecord_t *record) {
     case MY_APP7:
     case MY_APP8:
     case MY_APP9:
-      int delta = keycode - MY_APP1;
       if (record->event.pressed) {
         switch (system_current) {
           case SYSTEM_WINDOWS: {
-            WITH(WIN, { PRESS(KC_1 + delta); });
+            WITH(WIN, { PRESS(KC_1 + (keycode - MY_APP1)); });
+            break;
+          }
+          case SYSTEM_LINUX: {
+            WITH(WIN, { PRESS(KC_1 + (keycode - MY_APP1)); });
             break;
           }
           case SYSTEM_MACOS: {
-            WITH(CTRL, { WITH(COMMAND, { PRESS(KC_1 + delta); }); });
+            WITH(CTRL, { WITH(COMMAND, { PRESS(KC_1 + (keycode - MY_APP1)); }); });
             break;
           }
         }
