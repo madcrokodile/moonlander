@@ -26,5 +26,3 @@ char* get_key_name(uint16_t keycode) {
 
     return "<unknown>";
 }
-
-void add_all_key_names();

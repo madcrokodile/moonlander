@@ -1,6 +1,6 @@
 #define ADD_KEY(code) add_key_name(code, #code);
 
-void add_all_key_names() {
+void add_all_key_names(void) {
 ADD_KEY(KS_GRV) 
 ADD_KEY(KS_TILD)
 ADD_KEY(KS_1)
