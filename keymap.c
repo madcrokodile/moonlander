@@ -2,6 +2,8 @@
 #include <quantum/pointing_device.h>
 #include "version.h"
 
+#include "debug_print.h"
+
 #include "arbitrary_keycode/include.h"
 
 #define CUSTOM_SAFE_RANGE ML_SAFE_RANGE
@@ -528,9 +530,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
 }
 
+#include "debug_print.c"
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (!initted_for_layer_state) {
       uprintf("KEYCODES: custom_start: %d, custom: %d, custom_lang: %d, combo: %d, lang_shift: %d\n", KEYCODES_START, MY_HOME, EN_LTEQ, COMBO_START, LANG_SHIFT_START);
+      add_all_key_names();
   }
   initted_for_layer_state = true;
 
