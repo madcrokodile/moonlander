@@ -539,6 +539,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   initted_for_layer_state = true;
 
+  uprintf("BGN: key=%d(%s), %s, t=%d", keycode, get_key_name(keycode), record->event.pressed ? "down" : "up", record->event.time);
+
   if (!process_my_music_keys(keycode, record)) {
     return false;
   }
