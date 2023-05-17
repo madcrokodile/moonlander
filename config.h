@@ -16,7 +16,7 @@
 #define COMBO_MAX_SIZE 4
 #define COMBO_STACK_MAX_SIZE 5
 #define COMBO_WAIT_TIME 100
-#define COMBO_DEBUG
+//#define COMBO_DEBUG
 
 #define COLOR_PICTURE_DEFAULT 2
 
