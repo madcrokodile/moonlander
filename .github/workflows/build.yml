@@ -46,7 +46,7 @@ jobs:
           echo "Artifact-name: ${{ steps.build.outputs.artifact-name }}"
       
       - name: Archive artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "${{ steps.build.outputs.artifact-name }}"
           path: |
