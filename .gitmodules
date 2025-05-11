@@ -6,4 +6,4 @@
 	url = git@github.com:madcrokodile/arbitrary_keycode.git
 [submodule "combo"]
 	path = combo
-	url = git@github.com/klavarog/combo
+	url = git@github.com/klavarog/combo.git
