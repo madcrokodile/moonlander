@@ -1,9 +1,9 @@
 [submodule "lang_shift"]
 	path = lang_shift
-	url = https://github.com/madcrokdile/lang_shift
+	url = git@github.com:madcrokodile/lang_shift.git
 [submodule "arbitrary_keycode"]
 	path = arbitrary_keycode
-	url = https://github.com/madcrokdile/arbitrary_keycode
+	url = git@github.com:madcrokodile/arbitrary_keycode.git
 [submodule "combo"]
 	path = combo
-	url = https://github.com/klavarog/combo
+	url = git@github.com/klavarog/combo
